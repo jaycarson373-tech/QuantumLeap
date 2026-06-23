@@ -1,0 +1,9 @@
+{
+  "name": "quantumleap-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp -R index.html styles.css script.js assets dist/",
+    "start": "python3 -m http.server 3000"
+  }
+}
