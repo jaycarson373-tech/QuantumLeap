@@ -2,9 +2,10 @@
   "name": "quantumleap-landing",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "mkdir -p dist && cp -R index.html styles.css script.js assets dist/",
+    "build": "vite build",
     "start": "vite --host 0.0.0.0",
     "preview": "vite preview --host 0.0.0.0"
   },
