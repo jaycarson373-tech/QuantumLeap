@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QuantumLeap | Hourly Timeline Arena</title>
+    <meta
+      name="description"
+      content="QuantumLeap is an isometric multiplayer GameFi arena where LEAP holders choose decade floors and split hourly rewards when their era is drawn."
+    />
+    <link rel="preload" href="./assets/quantumleap-hero.svg" as="image" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="QuantumLeap home">
+        <span class="brand-mark" aria-hidden="true">QL</span>
+        <span>QuantumLeap</span>
+      </a>
+      <nav class="nav-links" aria-label="Site">
+        <a href="#loop">Game Loop</a>
+        <a href="#verify">Fair Draws</a>
+        <a href="#waitlist">Waitlist</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-art"
+          src="./assets/quantumleap-hero.svg"
+          alt="Isometric QuantumLeap arena with ten glowing decade floors floating in space."
+        />
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Solana GameFi MMO</p>
+          <h1 id="hero-title">QuantumLeap</h1>
+          <p class="hero-copy">
+            Pick a decade floor, hold your ground, and split the hourly creator-fee pot when your era hits.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#waitlist">Join waitlist</a>
+            <a class="button secondary" href="#loop">See the loop</a>
+          </div>
+          <dl class="hero-stats" aria-label="QuantumLeap quick facts">
+            <div>
+              <dt>10</dt>
+              <dd>Decade floors</dd>
+            </div>
+            <div>
+              <dt>1/hr</dt>
+              <dd>Server draw</dd>
+            </div>
+            <div>
+              <dt>Equal</dt>
+              <dd>Winner split</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="loop" class="section intro-band" aria-labelledby="loop-title">
+        <div class="section-inner two-column">
+          <div>
+            <p class="eyebrow">The core loop</p>
+            <h2 id="loop-title">Stand on the era you think will jump.</h2>
+          </div>
+          <p class="section-copy">
+            QuantumLeap turns token holding into a live multiplayer ritual: connect your wallet, move through an
+            isometric timeline, leap between eras, and wait for the next server-authoritative hourly draw.
+          </p>
+        </div>
+      </section>
+
+      <section class="section steps" aria-label="How QuantumLeap works">
+        <div class="section-inner step-grid">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <h3>Choose your floor</h3>
+            <p>Move your avatar across one of ten decade floors, from the 1930s through the 2020s.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <h3>Hold enough LEAP</h3>
+            <p>Eligibility is checked from chain data at the snapshot tick, not from client-reported balances.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <h3>Split the pot</h3>
+            <p>If your floor wins, every eligible player on that floor shares the hour's creator-fee rewards equally.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="verify" class="section verify" aria-labelledby="verify-title">
+        <div class="section-inner verify-layout">
+          <div>
+            <p class="eyebrow">Provable fairness</p>
+            <h2 id="verify-title">The client never rolls the dice.</h2>
+            <p class="section-copy">
+              Draws are planned around a commit-reveal flow: the server commits before the hour, reveals after the
+              snapshot, and publishes the inputs needed to recompute the winning floor.
+            </p>
+          </div>
+          <div class="verify-panel" aria-label="Example verification flow">
+            <div>
+              <span>Commit</span>
+              <code>sha256(serverSeed)</code>
+            </div>
+            <div>
+              <span>Reveal</span>
+              <code>serverSeed + hourId</code>
+            </div>
+            <div>
+              <span>Floor</span>
+              <code>hash % 10</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section floors" aria-labelledby="floors-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">1930s to 2020s</p>
+            <h2 id="floors-title">Ten floors. One hourly leap.</h2>
+          </div>
+          <div class="floor-strip" aria-label="Decade floors">
+            <span>1930s</span>
+            <span>1940s</span>
+            <span>1950s</span>
+            <span>1960s</span>
+            <span>1970s</span>
+            <span>1980s</span>
+            <span>1990s</span>
+            <span>2000s</span>
+            <span>2010s</span>
+            <span>2020s</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="waitlist" class="section waitlist" aria-labelledby="waitlist-title">
+        <div class="section-inner waitlist-layout">
+          <div>
+            <p class="eyebrow">Early access</p>
+            <h2 id="waitlist-title">Get the first jump window.</h2>
+            <p class="section-copy">
+              Join the waitlist for launch timing, floor previews, and the first public verifier drop.
+            </p>
+          </div>
+          <form class="signup-form" id="signup-form">
+            <label for="email">Email</label>
+            <div class="signup-row">
+              <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+              <button class="button primary" type="submit">Request access</button>
+            </div>
+            <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>QuantumLeap</span>
+      <span>Hourly timeline arena on Solana</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
