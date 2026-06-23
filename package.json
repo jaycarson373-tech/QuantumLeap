@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "vite --host 0.0.0.0",
     "build": "mkdir -p dist && cp -R index.html styles.css script.js assets dist/",
-    "start": "python3 -m http.server 3000"
+    "start": "vite --host 0.0.0.0",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
   }
 }
