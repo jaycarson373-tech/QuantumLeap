@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">QuantumLeap timeline arena</title>
+  <desc id="desc">A glowing isometric arena with ten decade floors, avatars, and time portal energy.</desc>
+  <defs>
+    <linearGradient id="floor" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2df0d7" stop-opacity=".56"/>
+      <stop offset=".52" stop-color="#ff5a9d" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#ffcc66" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" x2="1">
+      <stop offset="0" stop-color="#123331"/>
+      <stop offset=".55" stop-color="#271c36"/>
+      <stop offset="1" stop-color="#33250f"/>
+    </linearGradient>
+    <radialGradient id="portal" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#c9ff5f"/>
+      <stop offset=".28" stop-color="#26ead4"/>
+      <stop offset=".62" stop-color="#8b5cf6" stop-opacity=".62"/>
+      <stop offset="1" stop-color="#050808" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <path id="slab" d="M520 0 930 118 520 238 110 118Z"/>
+  </defs>
+  <rect width="1600" height="900" fill="#070909"/>
+  <g opacity=".85">
+    <circle cx="1265" cy="188" r="250" fill="url(#portal)" opacity=".46"/>
+    <circle cx="1265" cy="188" r="158" fill="none" stroke="#26ead4" stroke-width="4" opacity=".7" filter="url(#glow)"/>
+    <circle cx="1265" cy="188" r="98" fill="none" stroke="#ff5a9d" stroke-width="3" opacity=".64"/>
+    <circle cx="1265" cy="188" r="54" fill="none" stroke="#c9ff5f" stroke-width="2" opacity=".8"/>
+  </g>
+  <g opacity=".65" stroke="#26ead4" stroke-width="1.2">
+    <path d="M980 420 C1110 310 1222 292 1395 355" fill="none"/>
+    <path d="M928 562 C1118 470 1298 480 1512 628" fill="none" opacity=".5"/>
+    <path d="M1045 690 C1190 618 1348 642 1510 752" fill="none" opacity=".38"/>
+  </g>
+  <g transform="translate(255 170)" filter="url(#softGlow)">
+    <g opacity=".16" fill="#26ead4">
+      <ellipse cx="520" cy="724" rx="430" ry="84"/>
+    </g>
+    <g id="tower">
+      <g transform="translate(0 450)">
+        <use href="#slab" fill="url(#floor)" opacity=".68"/>
+        <path d="M110 118 520 238 930 118 930 164 520 286 110 164Z" fill="url(#edge)"/>
+      </g>
+      <g transform="translate(0 400)">
+        <use href="#slab" fill="url(#floor)" opacity=".72"/>
+        <path d="M110 118 520 238 930 118 930 160 520 282 110 160Z" fill="url(#edge)"/>
+      </g>
+      <g transform="translate(0 350)">
+        <use href="#slab" fill="url(#floor)" opacity=".76"/>
+        <path d="M110 118 520 238 930 118 930 158 520 280 110 158Z" fill="url(#edge)"/>
+      </g>
+      <g transform="translate(0 300)">
+        <use href="#slab" fill="url(#floor)" opacity=".8"/>
+        <path d="M110 118 520 238 930 118 930 156 520 278 110 156Z" fill="url(#edge)"/>
+      </g>
+      <g transform="translate(0 250)">
+        <use href="#slab" fill="url(#floor)" opacity=".84"/>
+        <path d="M110 118 520 238 930 118 930 154 520 276 110 154Z" fill="url(#edge)"/>
+      </g>
+      <g transform="translate(0 200)">
+        <use href="#slab" fill="url(#floor)" opacity=".88"/>
+        <path d="M110 118 520 238 930 118 930 152 520 274 110 152Z" fill="url(#edge)"/>
+      </g>
+      <g transform="translate(0 150)">
+        <use href="#slab" fill="url(#floor)" opacity=".9"/>
+        <path d="M110 118 520 238 930 118 930 150 520 272 110 150Z" fill="url(#edge)"/>
+      </g>
+      <g transform="translate(0 100)">
+        <use href="#slab" fill="url(#floor)" opacity=".94"/>
+        <path d="M110 118 520 238 930 118 930 148 520 270 110 148Z" fill="url(#edge)"/>
+      </g>
+      <g transform="translate(0 50)">
+        <use href="#slab" fill="url(#floor)" opacity=".96"/>
+        <path d="M110 118 520 238 930 118 930 146 520 268 110 146Z" fill="url(#edge)"/>
+      </g>
+      <g>
+        <use href="#slab" fill="url(#floor)"/>
+        <path d="M110 118 520 238 930 118 930 144 520 266 110 144Z" fill="url(#edge)"/>
+      </g>
+    </g>
+    <g fill="#f8fbf8" opacity=".85">
+      <circle cx="422" cy="75" r="8"/><path d="M422 84v27"/>
+      <circle cx="575" cy="122" r="7"/><path d="M575 130v24"/>
+      <circle cx="702" cy="92" r="8"/><path d="M702 101v27"/>
+      <circle cx="480" cy="242" r="7"/><path d="M480 250v24"/>
+      <circle cx="660" cy="303" r="8"/><path d="M660 312v27"/>
+      <circle cx="392" cy="391" r="7"/><path d="M392 399v24"/>
+      <circle cx="735" cy="486" r="8"/><path d="M735 495v27"/>
+      <circle cx="525" cy="587" r="8"/><path d="M525 596v27"/>
+    </g>
+    <g filter="url(#glow)">
+      <path d="M520 28 562 54 520 80 478 54Z" fill="#c9ff5f"/>
+      <path d="M520 28 520 80 478 54Z" fill="#26ead4" opacity=".85"/>
+      <path d="M520 28 562 54 520 80Z" fill="#ff5a9d" opacity=".65"/>
+    </g>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M1310 560 1370 594 1310 630 1250 594Z" fill="#ffcc66" opacity=".9"/>
+    <path d="M1370 594v85l-60 36v-85Z" fill="#2b1b0d" opacity=".9"/>
+    <path d="M1250 594v85l60 36v-85Z" fill="#10211f" opacity=".9"/>
+    <circle cx="1310" cy="510" r="62" fill="none" stroke="#c9ff5f" stroke-width="4"/>
+    <circle cx="1310" cy="510" r="34" fill="none" stroke="#26ead4" stroke-width="3"/>
+  </g>
+</svg>
